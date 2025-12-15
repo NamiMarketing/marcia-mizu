@@ -178,12 +178,13 @@
       font-weight: 400;
     }
   }
-  .swiper{
+  #swiper{
     .swiper-slide{
       width: 40rem !important;
       display: grid;
       gap: 2.2rem;
-      grid-template-rows: auto auto;
+      grid-template-rows: 50rem auto;
+      place-items: start;
       img{
         height: 50rem;
       }
@@ -249,25 +250,59 @@
 
 // Depoimento Section
 .depoimento {
-  padding: 4rem 5%;
+  padding: 0rem 5% 14rem;
+  position: relative;
   .depoimento-wrapper {
     max-width: 1500px;
     display: flex;
     gap: 15rem;
-    align-items: center;
-  }
-  .depoimento-text{
-    h3{
-      font-size: 2.6rem;
-      font-weight: 300;
-      text-transform: uppercase;
-      line-height: 2.6rem;
+    .depoimento-left{
+      width: 32rem;
+      h3{
+        font-size: 2.6rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        line-height: 3rem;
+      }
+      span{
+        font-family: $miller;
+        font-style: italic;
+        font-size: 3rem;
+        line-height: 4rem;
+      }
     }
-    span{
-      font-family: $miller;
-      font-style: italic;
-      font-size: 3rem;
-      line-height: 3.6rem;
+    #swiper2{
+      margin-left: 5rem;
+      padding-bottom: 9rem;
+      .swiper-slide{
+        z-index: 100;
+        position: relative;
+        padding-left: 5rem;
+        svg{
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        p{
+          font-size: 2rem;
+          line-height: 2.6rem;
+          letter-spacing: 2%;
+          width: 71.5rem !important;
+        }
+        h4{
+          font-size: 2.2rem;
+          font-weight: 500;
+          line-height: 2.6rem;
+        }
+      }
+      .swiper-pagination{
+        position: absolute;
+        margin-left: 5rem;
+        text-align: left;
+        .swiper-pagination-bullet-active{
+          background-color: $background2;
+        }
+      }
     }
   }
 }
