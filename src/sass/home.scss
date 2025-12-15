@@ -109,6 +109,7 @@
 
 // Serviços Section
 .servicos{
+  padding-bottom: 14rem;
   .servicos-grid {
     max-width: 1500px;
     margin: 0 auto;
@@ -147,135 +148,130 @@
 
 // Touch Section
 .touch-section {
-  padding: 4rem 5%;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
-  align-items: center;
-}
+  padding: 7.8rem 5% 8.5rem;
+  background-color: $background2;
+  display: flex;
+  gap: 10.5rem;
 
-.touch-left {
-  color: white;
-}
-
-.touch-title {
-  font-family: 'Quasimoda';
-  font-size: 2.5rem;
-  font-weight: 300;
-  line-height: 1.2;
-  color: white;
-  margin-bottom: 1.5rem;
-  text-transform: lowercase;
-}
-
-.touch-subtitle {
-  display: block;
-  font-style: italic;
-  font-weight: normal;
-}
-
-.touch-description {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #d0d3c2;
-  margin-bottom: 1rem;
-}
-
-.touch-images {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-.touch-image-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  aspect-ratio: 1;
-}
-
-.touch-image-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.touch-image-item:hover img {
-  transform: scale(1.05);
+  .touch-left{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    width: 29.5rem;
+    .touch-title{
+      font-size: 4rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      line-height: 5rem;
+      color: $bege;
+      span{
+        font-weight: 400;
+        font-family: $miller;
+        font-style: italic;
+      }
+    }
+    .touch-description {
+      font-size: 2rem;
+      line-height: 3rem;
+      color: $bege;
+      letter-spacing: 2%;
+      font-weight: 400;
+    }
+  }
+  .swiper{
+    .swiper-slide{
+      width: 40rem !important;
+      display: grid;
+      gap: 2.2rem;
+      grid-template-rows: auto auto;
+      img{
+        height: 50rem;
+      }
+      p{
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 2%;
+        color: $bege;
+        text-align: center;
+      }
+    }
+  }
 }
 
 // Projetos Section
 .projetos {
-  padding: 4rem 5%;
-  background-color: white;
+  padding: 12rem 5%;
+  .projetos-wrapper {
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    h3 {
+      font-size: 2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    .projetos-up{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      .projeto-item {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: center;
+      }
+    }
+    .projeto-bottom{
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      align-items: center;
+      width: 100%;
+      aspect-ratio: 124/50;
+      height: auto;
+      object-fit: cover;
+      img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+    .button{
+      margin: auto;
+    }
+  }
 }
 
-.projetos-grid {
-  max-width: 1200px;
-  margin: 0 auto 2rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.projeto-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  aspect-ratio: 1;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.projeto-item:hover {
-  transform: scale(1.02);
-}
-
-.projeto-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.projeto-item h3 {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  right: 1.5rem;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: white;
-  text-transform: lowercase;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  margin: 0;
-}
-
-.projetos-cta {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  justify-content: center;
-  cursor: pointer;
-  font-weight: 600;
-  color: black;
-  text-transform: lowercase;
-}
 
 // Depoimento Section
 .depoimento {
   padding: 4rem 5%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
+  .depoimento-wrapper {
+    max-width: 1500px;
+    display: flex;
+    gap: 15rem;
+    align-items: center;
+  }
+  .depoimento-text{
+    h3{
+      font-size: 2.6rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      line-height: 2.6rem;
+    }
+    span{
+      font-family: $miller;
+      font-style: italic;
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+  }
 }
 
-.depoimento-wrapper {
-  max-width: 800px;
-  text-align: center;
-}
 
 .depoimento-quote {
   font-size: 4rem;

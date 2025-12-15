@@ -88,81 +88,79 @@ cssPath: "/css/home.css"
       </svg>
       <span>saiba mais sobre nossos serviços</span>
     </a>
-
-
-
-
-
-    <div class="servico-item">
-      <div class="servico-image">
-        <img src="../img/home/interno.png" alt="Planejamento Interno">
-      </div>
-      <h3>planejamento interno de projetos</h3>
-    </div>
-    <div class="servico-item">
-      <div class="servico-image">
-        <img src="../img/home/coorporativo.pn" alt="Treinamento Corporativo">
-      </div>
-      <h3>treinamento corporativo</h3>
-    </div>
   </div>
 </section>
 
 <!-- TOUCH EXCLUSIVO SECTION -->
 <section class="touch-section">
   <div class="touch-left">
-    <h2 class="touch-title">nosso<br><span class="touch-subtitle">toque<br>exclusivo</span></h2>
+    <h2 class="touch-title">nosso<br>toque<br/><span class="touch-subtitle">exclusivo</span></h2>
     <p class="touch-description">Diferenciais que unem técnica, estilo e um olhar apurado para o que realmente importa.</p>
   </div>
-  <div class="touch-images">
-    <div class="touch-image-item">
-      <img src="../img/figma/imgRectangle24.jpg" alt="">
-    </div>
-    <div class="touch-image-item">
-      <img src="../img/figma/imgRectangle25.jpg" alt="">
-    </div>
-    <div class="touch-image-item">
-      <img src="../img/figma/imgRectangle26.jpg" alt="">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="../img/home/swiper5.png" alt="">
+        <p>ORGANIZAÇÃO DE PONTA A PONTA, COM SUPORTE TOTAL</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="../img/home/swiper4.png" alt="">
+        <p>EQUIPE CAPACITADA COM CERTIFICAÇÃO EM PERSONAL ORGANIZER</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="../img/home/swiper1.png" alt="">
+        <p>planejamento interno de projetos</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="../img/home/swiper2.png" alt="">
+        <p>treinamento corporativo</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="../img/home/swiper3.png" alt="">
+        <p>treinamento de funcionários</p>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- PROJETOS SECTION -->
 <section class="projetos">
-  <div class="projetos-grid">
-    <div class="projeto-item">
-      <img src="../img/figma/imgRectangle1.jpg" alt="Projeto A&F">
-      <h3>projeto a&f</h3>
+  <div class="projetos-wrapper">
+    <div class="projetos-up">
+      <div class="projeto-item">
+        <img src="../img/home/projeto1.png" alt="Projeto A&F">
+        <h3>projeto a&f</h3>
+      </div>
+      <div class="projeto-item">
+        <img src="../img/home/projeto2.png" alt="Projeto C&Z">
+        <h3>projeto c&z</h3>
+      </div>
+      <div class="projeto-item">
+        <img src="../img/home/projeto3.png" alt="Projeto M&G">
+        <h3>projeto m&g</h3>
+      </div>
     </div>
-    <div class="projeto-item">
-      <img src="../img/figma/imgRectangle4.jpg" alt="Projeto C&Z">
-      <h3>projeto c&z</h3>
-    </div>
-    <div class="projeto-item">
-      <img src="../img/figma/imgRectangle5.jpg" alt="Projeto M&G">
-      <h3>projeto m&g</h3>
-    </div>
-    <div class="projeto-item">
-      <img src="../img/figma/imgRectangle6.jpg" alt="Projeto VIVA">
+    <div class="projeto-bottom">
+      <img src="../img/home/projeto4.png" alt="Projeto VIVA">
       <h3>projeto viva</h3>
+    </div> 
+    <div class="button">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="11" cy="11" r="11" fill="#9C5C45"/>
+      </svg>
+      <span>veja mais projetos</span>
     </div>
-  </div>
-  <div class="projetos-cta">
-    <span>veja mais projetos</span>
-    <svg class="dot-icon" viewBox="0 0 22 22" width="22" height="22">
-      <circle cx="11" cy="11" r="11" fill="#000"></circle>
-    </svg>
   </div>
 </section>
 
 <!-- DEPOIMENTO SECTION -->
 <section class="depoimento">
   <div class="depoimento-wrapper">
-    <div class="depoimento-quote">
-      <span>"</span>
+    <div class="depoimento-text">
+      <h3><span>Experiências</span><br/>Que refletem nosso<br/><span>Trabalho</span></h3>
     </div>
     <div class="depoimento-content">
-      <h3>Experiências que refletem nosso trabalho</h3>
       <p class="depoimento-text">
         Márcia gostaria de agradecer imensamente o trabalho executado por vc e sua equipe! Nosso lar é nosso refúgio, um dos bens mais preciosos que temos! Vc consegue compreender e traduzir tudo que gostamos e precisamos! Muita atenção, personalização, carinho, cuidado, respeito, confiança e competência de sobra! Profissional especializada de grande experiência. Muito obrigado e Parabéns!! Pelo trabalho, pela equipe e profissionalismo!! Gratidão!
       </p>
@@ -195,3 +193,11 @@ cssPath: "/css/home.css"
 </section>
 
 {% include 'footer.njk' %}
+
+
+<script>
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+  });
+</script>
