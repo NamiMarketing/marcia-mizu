@@ -1,0 +1,440 @@
+﻿@use 'index' as *;
+
+// Hero Section
+.hero {
+  aspect-ratio: 144/64;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.hero-content {
+  position: absolute;
+  left: 10rem;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 5.5rem;
+  img{
+    width: 29.5rem;
+    height: 23.2rem;
+  }
+  .hero-text{
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    letter-spacing: 10%;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $bege;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    span{
+      font-weight: 400;
+      font-family: $miller;
+    }
+  }
+}
+
+// Sobre Section
+.sobre {
+  padding: 14rem 0;
+  .sobre-wrapper {
+    width: 85%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+     gap: 10rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .sobre-image {
+    width: 100%;
+    max-width: 51rem;
+    overflow: hidden;
+    height: auto;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  
+  .sobre-content h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    line-height: 2.6rem;
+    text-transform: uppercase;
+    letter-spacing: 5%;
+  }
+  
+  .sobre-subtitle {
+    font-size: 2.2rem;
+    margin-bottom: 2.6rem;
+    line-height: 2.2rem;
+    font-family: $miller;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 5%;
+  }
+  
+  .sobre-text {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    margin: 5.5rem 0;
+    width: 61rem;
+  }
+}
+
+
+// Serviços Section
+.servicos{
+  .servicos-grid {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    row-gap: 6rem;
+    .servico-item {
+      display: flex;
+      gap: 3.5rem;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .servico-image {
+        overflow: hidden;
+        aspect-ratio: 61/41;
+        width: 61rem;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+    }
+    .button{
+      justify-content: center;
+    }
+  }
+  
+}
+
+// Touch Section
+.touch-section {
+  padding: 4rem 5%;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.touch-left {
+  color: white;
+}
+
+.touch-title {
+  font-family: 'Quasimoda';
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-transform: lowercase;
+}
+
+.touch-subtitle {
+  display: block;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.touch-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d0d3c2;
+  margin-bottom: 1rem;
+}
+
+.touch-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.touch-image-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 1;
+}
+
+.touch-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.touch-image-item:hover img {
+  transform: scale(1.05);
+}
+
+// Projetos Section
+.projetos {
+  padding: 4rem 5%;
+  background-color: white;
+}
+
+.projetos-grid {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.projeto-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.projeto-item:hover {
+  transform: scale(1.02);
+}
+
+.projeto-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projeto-item h3 {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  text-transform: lowercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+.projetos-cta {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 600;
+  color: black;
+  text-transform: lowercase;
+}
+
+// Depoimento Section
+.depoimento {
+  padding: 4rem 5%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.depoimento-wrapper {
+  max-width: 800px;
+  text-align: center;
+}
+
+.depoimento-quote {
+  font-size: 4rem;
+  color: #0b425e;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.depoimento-content h3 {
+  font-family: 'Quasimoda';
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 1.5rem;
+  text-transform: lowercase;
+}
+
+.depoimento-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.depoimento-autor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.depoimento-autor img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.autor-name {
+  font-weight: 600;
+  color: black;
+  margin: 0;
+}
+
+.depoimento-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #5d7156;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #0b425e;
+}
+
+.dot:hover {
+  background-color: #71ccff;
+}
+
+// Footer Section
+.footer-social {
+  padding: 3rem 5%;
+  background-color: #5d7156;
+  text-align: center;
+  color: white;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #d0d3c2;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.social-link img {
+  width: 24px;
+  height: 24px;
+}
+
+.phone {
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero-tagline {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+
+  .logo-hero img {
+    width: 120px;
+  }
+
+  .sobre-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .touch-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .touch-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .depoimento-wrapper {
+    max-width: 100%;
+  }
+}
