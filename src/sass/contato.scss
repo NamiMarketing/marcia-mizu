@@ -13,20 +13,24 @@
         gap: 5.6rem;
         .title{
             display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-            h2{
-                font-size: 2.2rem;
-                line-height: 2.2rem;
-                letter-spacing: 8%;
-                text-transform: uppercase;
-                font-weight: 300;
-            }
-            h2 span{
-                font-weight: 400;
-                font-family: 'Miller Banner', serif;
-                font-style: italic;
-            }
+                flex-direction: column;
+                gap: 1rem;
+                h2{
+                    font-size: 2.2rem;
+                    line-height: 2.2rem;
+                    letter-spacing: 8%;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                }
+                h3{
+                    font-size: 2.2rem;
+                    line-height: 2.2rem;
+                    letter-spacing: 8%;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    font-family: $miller;
+                    font-style: italic;
+                }
         }
         .icons-contato{
             display: flex;
