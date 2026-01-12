@@ -1,0 +1,804 @@
+---
+title: Marcia Mizu - Organização com Propósito
+layout: "base.njk"
+cssPath: "/css/servicos.css"
+---
+
+{% include 'nav.njk' %}
+
+<div class="selector">
+  <div class="selectionButton selected" id="residencial">
+    <img src="../img/servicos/residencial.png" alt="">
+    <h2>Organização Residencial</h2>
+  </div>
+  <div class="selectionButton" id="empresarial">
+    <img src="../img/servicos/empresarial.png" alt="">
+    <h2>Organização Empresarial</h2>
+  </div>
+  <div class="selectionButton" id="comercial">
+    <img src="../img/servicos/comercial.png" alt="">
+    <h2>Organização Comercial</h2>
+  </div>
+  <div class="selectionButton" id="mudanca">
+    <img src="../img/servicos/mudanca.png" alt="">
+    <h2>Organização de Mudança</h2>
+  </div>
+  <div class="selectionButton" id="lifestyle">
+    <img src="../img/servicos/lifestyle.png" alt="">
+    <h2>Organização Lifestyle</h2>
+  </div>
+</div>
+<section id="info" class="info">
+    <div class="intro">
+                    <div class="wrap-intro">
+        <img src="../img/servicos/residencial-intro.png" alt="">
+        <div class="right-intro">
+            <h1>Residencial</h1>
+            <p> 
+                A Organização Residencial tem como propósito transformar casas em espaços mais leves, práticos e acolhedores, totalmente adaptados à rotina e às necessidades de cada família.
+                <br/>
+                <br/>
+                Os projetos podem envolver desde a organização de um único ambiente — como closet, cozinha, depósito ou área de serviço — até a organização completa de toda a residência, incluindo processos de mudança.
+                <br/>
+                <br/>
+                Cada projeto é desenvolvido de forma personalizada, garantindo eficiência e praticidade no resultado final.
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="itens">
+        <div class="item">
+            <div class="left-item">
+                <h2>
+                    Cada casa reflete quem vive nela
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/vive.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Organizar com propósito começa entendendo quem habita o espaço — seus hábitos, sua rotina e sua forma de viver.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="left-item">
+                <h2>
+                    Planejamento inteligente
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/inteligente.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Analisamos quem vive no espaço, como cada ambiente é usado e o fluxo da rotina para definir soluções eficientes. Consideramos hábitos, circulação, arquitetura e usabilidade a longo prazo, criando uma casa funcional, intuitiva e alinhada ao seu ritmo.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="left-item">
+                <h2>
+                    Sistemas práticos
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/praticos.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Criamos métodos simples e intuitivos de organização, fáceis de manter por toda a família ou equipe. Cada item tem um lugar definido, garantindo ordem contínua e praticidade no cotidiano.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="left-item">
+                <h2>
+                    Treinamento de funcionários
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/treinamento.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Capacitamos os funcionários que cuidam da sua casa para atuar com organização, atenção e sensibilidade aos detalhes, elaborando um plano personalizado de limpeza e conservação que respeita a rotina, os espaços e a forma de viver de cada residência.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="pre-footer">
+        <div class="item-pre">
+            <img src="../img/servicos/pre-residencial.png" alt="">
+            <div class="right">
+                <p>
+                    A organização não transforma apenas espaços — transforma também a forma como você vive neles. A verdadeira transformação acontece quando os espaços passam a trabalhar a favor da sua rotina, e não o contrário.
+                    <br/>
+                    <br/>
+                    Com planejamento inteligente e olhar sensível, sua casa pode refletir equilíbrio, leveza e praticidade em cada detalhe.
+                    <br/>
+                    <br/>
+                    Entre em contato e dê início a essa mudança.
+                    </p>
+                <div class="button">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="11" fill="#5D7156"/>
+                    </svg>
+                    <span>entre em contato</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+{% include 'footer.njk' %}
+
+<!-- Script que altera as paginas -->
+
+<script>
+  let selected = "residencial";
+  const section = document.getElementById("info");
+
+  const residencial = document.getElementById("residencial");
+  residencial.addEventListener("click", () => {
+    resetSelection();
+    selected = "residencial";
+    residencial.classList.add("selected");
+    updateSection();
+  });
+  
+  const empresarial = document.getElementById("empresarial");
+  empresarial.addEventListener("click", () => {
+    resetSelection();
+    selected = "empresarial";
+    empresarial.classList.add("selected");
+    updateSection();
+  });
+  
+  const comercial = document.getElementById("comercial");
+  comercial.addEventListener("click", () => {
+    resetSelection();
+    selected = "comercial";
+    comercial.classList.add("selected");
+    updateSection();
+  });
+
+  const mudanca = document.getElementById("mudanca");
+  mudanca.addEventListener("click", () => {
+    resetSelection();
+    selected = "mudanca";
+    mudanca.classList.add("selected");
+    updateSection();
+  });
+
+  const lifestyle = document.getElementById("lifestyle");
+  lifestyle.addEventListener("click", () => {
+    resetSelection();
+    selected = "lifestyle";
+    lifestyle.classList.add("selected");
+    updateSection();
+  });
+
+  function resetSelection() {
+    residencial.classList.remove("selected");
+    empresarial.classList.remove("selected");
+    comercial.classList.remove("selected");
+    mudanca.classList.remove("selected");
+    lifestyle.classList.remove("selected");
+  }
+
+  function updateSection() {
+
+  switch (selected){
+    case "residencial":
+      section.innerHTML = `
+                <div class="intro">
+                    <div class="wrap-intro">
+        <img src="../img/servicos/residencial-intro.png" alt="">
+        <div class="right-intro">
+            <h1>Residencial</h1>
+            <p> 
+                A Organização Residencial tem como propósito transformar casas em espaços mais leves, práticos e acolhedores, totalmente adaptados à rotina e às necessidades de cada família.
+                <br/>
+                <br/>
+                Os projetos podem envolver desde a organização de um único ambiente — como closet, cozinha, depósito ou área de serviço — até a organização completa de toda a residência, incluindo processos de mudança.
+                <br/>
+                <br/>
+                Cada projeto é desenvolvido de forma personalizada, garantindo eficiência e praticidade no resultado final.
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="itens">
+        <div class="item">
+            <div class="left-item">
+                <h2>
+                    Cada casa reflete quem vive nela
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/vive.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Organizar com propósito começa entendendo quem habita o espaço — seus hábitos, sua rotina e sua forma de viver.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="left-item">
+                <h2>
+                    Planejamento inteligente
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/inteligente.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Analisamos quem vive no espaço, como cada ambiente é usado e o fluxo da rotina para definir soluções eficientes. Consideramos hábitos, circulação, arquitetura e usabilidade a longo prazo, criando uma casa funcional, intuitiva e alinhada ao seu ritmo.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="left-item">
+                <h2>
+                    Sistemas práticos
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/praticos.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Criamos métodos simples e intuitivos de organização, fáceis de manter por toda a família ou equipe. Cada item tem um lugar definido, garantindo ordem contínua e praticidade no cotidiano.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="left-item">
+                <h2>
+                    Treinamento de funcionários
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/treinamento.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Capacitamos os funcionários que cuidam da sua casa para atuar com organização, atenção e sensibilidade aos detalhes, elaborando um plano personalizado de limpeza e conservação que respeita a rotina, os espaços e a forma de viver de cada residência.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="pre-footer">
+        <div class="item-pre">
+            <img src="../img/servicos/pre-residencial.png" alt="">
+            <div class="right">
+                <p>
+                    A organização não transforma apenas espaços — transforma também a forma como você vive neles. A verdadeira transformação acontece quando os espaços passam a trabalhar a favor da sua rotina, e não o contrário.
+                    <br/>
+                    <br/>
+                    Com planejamento inteligente e olhar sensível, sua casa pode refletir equilíbrio, leveza e praticidade em cada detalhe.
+                    <br/>
+                    <br/>
+                    Entre em contato e dê início a essa mudança.
+                    </p>
+                <div class="button">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="11" fill="#5D7156"/>
+                    </svg>
+                    <span>entre em contato</span>
+                </div>
+            </div>
+        </div>
+    </div>
+            `;
+      break
+    case "empresarial":
+    section.innerHTML = `
+ <div class="intro">
+    <div class="wrap-intro">
+        <img src="../img/servicos/empresarial-intro.png" alt="">
+        <div class="right-intro">
+            <h1>Empresarial</h1>
+            <p> 
+                A organização empresarial tem o poder de transformar não apenas espaços, mas também rotinas e culturas de trabalho. 
+                <br/>
+                <br/>
+                Nosso trabalho é ajudar empresas e escritórios de diferentes setores a estruturarem seus ambientes e processos de forma eficiente, funcional e alinhada à experiência que desejam oferecer a clientes e colaboradores.
+                <br/>
+                <br/>
+                Mais do que organizar fisicamente, desenvolvemos projetos estratégicos e personalizados que envolvem:
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="itens">
+        <div class="item">
+            <div class="left-item">
+                <h2>
+                    Organização funcional                
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/praticos.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Organizamos cada detalhe: gavetas, materiais de escritório, documentos e áreas de apoio, como copa e DML.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="left-item">
+                <h2>
+                    Otimização de rotinas internas
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/otimizacao.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Para aumentar a produtividade e reduzir desperdícios de tempo.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="left-item">
+                <h2>
+                    Treinamento de equipe
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/treinamento.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Capacitamos sua equipe para garantir que a nova estrutura de organização seja mantida com eficiência no dia a dia, por meio da elaboração de um plano estratégico de limpeza, conservação dos ambientes e cuidado com uniformes e vestimentas profissionais.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="pre-footer">
+        <div class="item-pre">
+            <img src="../img/servicos/pre-empresarial.png" alt="">
+            <div class="right center">
+                <h3>
+                    Serviços de Facilities
+                </h3>
+                <p>
+                    Cuidamos da infraestrutura e das rotinas essenciais para que cada ambiente funcione com eficiência e segurança. Organizamos e coordenamos atividades como limpeza, manutenção, apoio operacional e jardinagem, garantindo espaços sempre prontos, fluidos e bem cuidados. Conduzimos a operação para que você possa focar no que realmente importa.
+                </p>
+            </div>
+        </div>
+        <div class="item-pre">
+            <img src="../img/servicos/pre-empresarial2.png" alt="">
+            <div class="right">
+                <h3>
+                    DECORAÇÃO E EXPERIÊNCIA SENSORIAL
+                </h3>
+                <p>
+                    A ambientação corporativa é tratada como uma extensão da identidade da marca. Cada detalhe é pensado para criar acolhimento, gerar conexão emocional e reforçar a mensagem que a empresa deseja transmitir.
+                    <br/>
+                    Quando necessário, fazemos a curadoria e aquisição de enxoval e itens decorativos, garantindo harmonia estética e funcionalidade
+                </p>
+                <h3>
+                    RESULTADOS ALCANÇADOS
+                </h3>
+                <div class="list">
+                    <span>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="5" cy="5" r="5" fill="#9B9E8F"/>
+                        </svg>
+                        Ambientes organizados, agradáveis e inspiradores;
+                    </span>
+                    <span>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="5" cy="5" r="5" fill="#9B9E8F"/>
+                        </svg>
+                        Processos internos mais claros e fluidos;
+                    </span>
+                    <span>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="5" cy="5" r="5" fill="#9B9E8F"/>
+                        </svg>
+                        Equipes engajadas e produtivas;
+                    </span>
+                    <span>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="5" cy="5" r="5" fill="#9B9E8F"/>
+                        </svg>
+                        Experiência de atendimento aprimorada e alinhada à marca;
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pre-footer2">
+        <p>Organizar é criar uma base sólida para que sua empresa cresça com leveza, clareza e propósito. Fale conosco e descubra como alinhar espaço, estratégia e cultura em um único projeto.</p>
+        <div class="button">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="11" fill="#5D7156"/>
+            </svg>
+            <span>Fale conosco</span>
+        </div>
+    </div>
+            `;
+      break
+    case "comercial": 
+      section.innerHTML = `
+<div class="intro">
+    <div class="wrap-intro">
+        <img src="../img/servicos/comercial-intro.png" alt="">
+        <div class="right-intro">
+            <h1>COMERCIAL</h1>
+            <p> 
+                A organização de espaços comerciais vai muito além da estética — ela impacta diretamente na produtividade, na eficiência da operação e na experiência do cliente. Nosso trabalho é estruturar lojas, estoques e áreas de produção de forma funcional e inteligente, alinhando o espaço à rotina real da equipe.
+                <br/>
+                <br/>
+                Cada projeto começa com uma análise detalhada das rotinas, fluxos e necessidades do negócio. A partir disso, desenvolvo sistemas personalizados que otimizam o uso dos espaços e facilitam o dia a dia da operação.
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="itens">
+        <div class="item">
+            <div class="left-item big">
+                <h2>
+                    Organização Inteligente                 
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/praticos.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Soluções de organização para áreas de apoio e produção, que unem funcionalidade, estética e eficiência operacional, com atenção minuciosa aos detalhes e planejamento estratégico que contribui diretamente para o desempenho e as estratégias de vendas.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="left-item big">
+                <h2>
+                    Sistema de Categorização
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/categorizacao.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Categorizamos produtos e definimos padrões de armazenagem;
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="left-item big">
+                <h2>
+                    Gestão de Estoque Simplificada
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/treinamento.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Criamos de sistemas de identificação e controle de estoque, tornando a rotina mais ágil e organizada;
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="left-item big">
+                <h2>
+                    planejamento Estratégico de Layout
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/layout.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Planejamos e implementamos layouts inteligentes para estoque e loja, garantindo fluidez e aproveitamento de cada metro quadrado;
+                </p>
+            </div>
+        </div>        
+        <div class="item">
+            <div class="left-item big">
+                <h2>
+                    Treinamento de equipe
+                </h2>
+            </div>
+            <div class="mid-item">
+                <img src="../img/servicos/equipe.png" alt="">
+            </div>
+            <div class="right-item">
+                <p>
+                    Capacitamos sua equipe para garantir que a nova estrutura de organização seja mantida com eficiência no dia a dia, por meio da elaboração de um plano estratégico de limpeza, conservação dos ambientes e cuidado com uniformes e vestimentas profissionais.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="pre-footer">
+        <div class="item-pre">
+            <img src="../img/servicos/pre-comercial.png" alt="">
+            <div class="right">
+                <p>
+                   O resultado é um ambiente mais funcional, produtivo e agradável — que melhora a experiência de compra, fortalece a imagem da marca e potencializa a performance da equipe.
+                    <br/><br/>
+                    Já realizamos projetos de organização em diferentes segmentos, incluindo: lojas de roupas femininas, esportivas e infantis, lojas de utilidades domésticas e embalagens, salão de beleza, ateliê de doces, cafeteria e gelateria.
+                    <br/><br/>
+                    Organizar é criar estruturas que fazem o negócio crescer com leveza, clareza e eficiência. Dê o primeiro passo para transformar sua loja em um ambiente funcional, organizado e inspirador.
+                </p>
+                <div class="button">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="11" fill="#5D7156"/>
+                    </svg>
+                    <span>entre em contato</span>
+                </div>
+            </div>
+        </div>
+    </div>
+            `;
+      break
+    case "mudanca": 
+      section.innerHTML = `
+<div class="intro">
+    <div class="wrap-intro">
+        <img src="../img/servicos/mudanca-intro.png" alt="">
+        <div class="right-intro center">
+            <h1>MUDANÇA</h1>
+            <p> 
+                Cada mudança ou viagem é única, e por isso o serviço é sempre personalizado conforme o nível de acompanhamento desejado. O objetivo é tornar o processo mais leve, prático e tranquilo — do início ao fim.
+            </p>
+        </div>
+    </div>
+    </div>
+    
+    <div class="mudanca-itens">
+        <div class="mudanca-item">
+            <h3>Opção 1</h3>
+            <h1>Organização na casa nova</h1>
+            <p>Indicado para quem já realizou o transporte e deseja chegar ao novo lar com tudo no lugar, funcional e pronto para uso.</p>
+            <div class="mudanca-list">
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                    Desembalamos todos os volumes, garantindo cuidado e agilidade no processo.
+                </span>
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                    Categorizamos pertences de acordo com a rotina e o estilo de vida do cliente.
+                </span>
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                    Organizamos cada ambiente, definindo o local ideal para cada item.
+                </span>
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                    Aplicamos técnicas profissionais de dobra, setorização e identificação, facilitando o uso e a manutenção da organização.
+                </span>
+            </div>
+            <p>O serviço pode abranger toda a casa ou apenas cômodos específicos, conforme a necessidade do cliente.</p>
+            <div class="button">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="11" fill="#5D7156"/>
+                </svg>
+                <span>Fale conosco</span>
+            </div>
+        </div>
+        <div class="mudanca-item">
+            <h3>
+                OPÇÃO 02
+            </h3>
+            <h1>
+                Embalo + Organização na Casa Nova
+            </h1>
+            <p>Além da organização, oferecemos um suporte completo para quem busca uma mudança mais prática, segura e sem complicações.</p>
+            <div class="mudanca-list">
+                <h4>Na residência atual:</h4>
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                    Embalamos todos os pertences com cuidado e técnicas adequadas.
+                </span>
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                    Realizamos a identificação detalhada de cada caixa e categoria.
+                </span>
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                    Garantimos segurança e proteção dos itens durante todo o processo de transporte.
+                </span>
+            </div>
+            <div class="mudanca-list">
+                <h4>No novo lar:</h4>
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                Desembalamos todos os volumes de forma organizada e eficiente.
+                </span>
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                    Setorizamos e organizamos cada ambiente, definindo o local ideal para cada item.
+                </span>
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                    Entregamos a casa pronta para uso, garantindo uma mudança fluida, prática e sem estresse.
+                </span>
+            </div>
+            <div class="button">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="11" fill="#5D7156"/>
+                </svg>
+                <span>Fale conosco</span>
+            </div>
+        </div>
+        <div class="mudanca-item">
+            <h3>
+                OPÇÃO 03
+            </h3>
+            <h1>
+                mudança completa: Embalo + Organização na Casa Nova + gestão
+            </h1>
+            <p>Ideal para quem busca um acompanhamento integral em todas as fases da mudança, com tranquilidade e eficiência do início ao fim.</p>
+            <div class="mudanca-list">
+                <h4>Planejamento e preparação:</h4>
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                    Gestão detalhada de todas as etapas, desde o embalo até a organização final.
+                </span>
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                    Planejamento estratégico para otimizar tempo, logística e fluidez do processo.
+                </span>
+            </div>
+            <div class="mudanca-list">
+                <h4>Dia da mudança:</h4>
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                Acompanhamento presencial do carregamento, transporte e descarregamento.
+                </span>
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                    Orientação sobre a melhor disposição dos volumes para garantir segurança e agilidade.
+                </span>
+            </div>
+            <div class="mudanca-list">
+                <h4>No novo lar:</h4>
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                Organização completa de todos os ambientes, com definição do local ideal para cada item.
+                </span>
+                <span class="list-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.5" stroke="#9C5C45"/>
+                    </svg>
+                    Entrega do ambiente funcional, acolhedor e pronto para viver, com tudo em seu devido lugar.
+                </span>
+            </div>
+            <div class="button">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="11" fill="#5D7156"/>
+                </svg>
+                <span>Fale conosco</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="pre-footer2">
+        <p>Permita que sua mudança aconteça com leveza, conforto e tranquilidade — do primeiro ao último detalhe.</p>
+        <div class="button">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="11" fill="#5D7156"/>
+            </svg>
+            <span>Fale conosco</span>
+        </div>
+    </div>
+            `;
+      break
+    case "lifestyle": 
+      section.innerHTML = `
+<div class="intro">
+        <div class="wrap-intro">
+            <img src="../img/servicos/lifestyle-intro.png" alt="">
+            <div class="right-intro center">
+                <h1>Lifestyle</h1>
+                <p> 
+                    Viajar é um dos maiores prazeres da vida — mas se preparar para isso exige tempo, planejamento e cuidado. Pensando nisso, a organização de malas, iates e aviões particulares realizada por Márcia Mizu transforma o processo de partida em uma experiência tranquila, eficiente e sofisticada.
+                </p>
+            </div>
+        </div>
+        <div class="intro-gallery">
+            <img src="../img/servicos/lifestyle1.png" alt="">
+            <img src="../img/servicos/lifestyle2.png" alt="">
+            <img src="../img/servicos/lifestyle3.png" alt="">
+        </div>
+    </div>
+
+    <div class="lifestyle-itens">
+        <div class="lifestyle-item">
+            <div class="left-item">
+                <img src="../img/servicos/lifestyle-item1.png" alt="">
+            </div>
+            <div class="right-item">
+                <h3>Organização de mala de viagem</h3>
+                <p>
+                    Cada mala é organizada com discrição, técnica e total atenção ao estilo de vida do cliente. O processo é pensado nos mínimos detalhes para garantir uma experiência de viagem fluida, prática e impecável.
+                    <br/>
+                    Peça por peça — roupas, acessórios, cosméticos e itens pessoais — tudo é selecionado, categorizado e disposto de forma estratégica. Assim, a mala se torna funcional, completa e equilibrada: nada falta, nada excede.O resultado é uma experiência de viagem mais leve, eficiente e elegante, com fácil acesso ao que importa em cada momento.
+                </p>
+            </div>
+        </div>
+        <div class="lifestyle-item">
+            <div class="left-item">
+                <img src="../img/servicos/lifestyle-item2.png" alt="">
+            </div>
+            <div class="right-item">
+                <h3>Organização de espaços de alto padrão</h3>
+                <p>
+                    A organização de espaços de alto padrão vai muito além da estética: envolve inteligência espacial, fluidez operacional e um padrão elevado de personalização.
+                    <br/>
+                    Em iates, aviões particulares e ambientes exclusivos, cada compartimento é analisado para otimizar uso, acesso e segurança. Itens de bordo são padronizados, harmonizados visualmente e dispostos conforme a dinâmica real do cliente e da tripulação.
+                    <br/>
+                    O trabalho resulta em ambientes impecáveis, onde cada objeto tem função e lugar definidos — proporcionando conforto, praticidade e uma sensação contínua de ordem e sofisticação.
+                </p>
+            </div>
+        </div>
+        <div class="lifestyle-item">
+            <div class="left-item">
+                <img src="../img/servicos/lifestyle-item3.png" alt="">
+            </div>
+            <div class="right-item">
+                <h3>Organização de casa de férias</h3>
+                <p>
+                    Cuidamos da organização da sua casa de praia, campo ou chácara para que cada período de descanso seja vivido com leveza. Preparamos os ambientes para receber você e sua família, organizando armários, cozinhas, áreas de apoio e espaços de convivência, além de estruturar rotinas de limpeza e conservação adequadas ao uso sazonal do imóvel. Tudo é pensado para que a casa esteja sempre pronta para o descanso, sem preocupações, desde a chegada até o retorno.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pre-footer2">
+        <p>Liberte-se das preocupações e viaje com a tranquilidade de saber que cada detalhe foi pensado para você.</p>
+        <div class="button">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="11" fill="#5D7156"/>
+            </svg>
+            <span>Fale conosco</span>
+        </div>
+    </div>
+            `;
+      break
+  }
+  }
+</script>

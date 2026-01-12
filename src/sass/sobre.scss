@@ -1,0 +1,67 @@
+@use 'index' as *;
+
+.marcia{
+    display: flex;
+    gap: 10rem;
+    width: 85%;
+    max-width: 140rem;
+    margin: 9rem auto;
+    .right-marcia{
+        h2{
+            font-size: 3rem;
+            line-height: 3rem;
+            letter-spacing: 10%;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        p{
+            font-size: 2rem;
+            line-height: 2.8rem;
+            letter-spacing: 0%;
+            font-weight: 400;
+            margin-top: 16rem;
+        }
+    }
+}
+.about{
+    display: flex;
+    gap: 10rem;
+    width: 85%;
+    max-width: 140rem;
+    margin: auto;
+    margin-bottom: 10rem;
+    align-items: center;
+    .right-about{
+        p{
+            font-size: 2rem;
+            line-height: 2.8rem;
+            letter-spacing: 0%;
+            font-weight: 400;
+        }
+    }
+}
+
+.contato{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 85%;
+    max-width: 103rem;
+    margin: auto;
+    margin-bottom: 10rem;
+    align-items: center;
+    p{
+        font-size: 2rem;
+        line-height: 2.8rem;
+        letter-spacing: 0%;
+        font-weight: 400;
+        text-align: center;
+    }
+    h5{
+        font-size: 2.2rem;
+        line-height: 3rem;
+        letter-spacing: 0%;
+        font-weight: 400;
+        text-align: center;
+    }
+}

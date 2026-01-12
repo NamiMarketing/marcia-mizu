@@ -1,0 +1,52 @@
+@use 'index' as *;
+
+.contato{
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    width: 85%;
+    max-width: 140rem;
+    margin: 9rem auto 11rem;
+    .right-contato{
+        display: flex;
+        flex-direction: column;
+        gap: 5.6rem;
+        .title{
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            h2{
+                font-size: 2.2rem;
+                line-height: 2.2rem;
+                letter-spacing: 8%;
+                text-transform: uppercase;
+                font-weight: 300;
+            }
+            h2 span{
+                font-weight: 400;
+                font-family: 'Miller Banner', serif;
+                font-style: italic;
+            }
+        }
+        .icons-contato{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            .icon-contato{
+                display: flex;
+                gap: 1.3rem;
+                align-items: center;
+                p{
+                    font-size: 1.8rem;
+                    line-height: 1.8rem;
+                    letter-spacing: 5%;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+
+.contato-footer{
+    margin: 0 auto 8rem
+}
