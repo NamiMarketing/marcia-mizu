@@ -40,11 +40,11 @@
   }
 
   @media screen and (max-width: 700px) {
-    padding: 1.2rem 2.44rem;
+    padding: 1.5rem 2.2rem;
 
     >a{
-      width: 13rem;
-      height: 1.6rem;
+      width: 3rem;
+      height: 3rem;
       img{
         width: 100%;
         height: 100%;
@@ -59,8 +59,8 @@
 
     .hamburger{
       .abrir{
-        width: 6rem;
-        height: 4rem;
+        width: 2rem;
+        height: 1rem;
       }
       .fechar{
         display: none;
@@ -76,8 +76,8 @@
         display: none;
       }
       .fechar{
-        width: 6rem;
-        height: 4rem;
+        width: 2r em;
+        height: 1rem;
         display: initial;
       }
     }

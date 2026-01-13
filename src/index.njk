@@ -8,7 +8,8 @@ cssPath: "/css/home.css"
 
 <!-- HERO SECTION -->
 <header class="hero">
-  <img class="hero-background" src="../img/home/header.png" alt="">
+  <img class="hero-background tablet-desktop" src="../img/home/header.png" alt="">
+  <img class="hero-background only-mobile" src="../img/home/header-mob.png" alt="">
   <div class="hero-content">
     <img src="../img/home/logo-header.png" alt="">
     <div class="hero-text">
@@ -23,7 +24,7 @@ cssPath: "/css/home.css"
 <!-- SOBRE SECTION -->
 <section class="sobre">
   <div class="sobre-wrapper">
-    <div class="sobre-image">
+    <div class="sobre-image tablet-desktop">
       <img src="../img/home/marcia.png" alt="foto da Márcia Mizu">
     </div>
     <div class="sobre-content">
@@ -35,6 +36,7 @@ cssPath: "/css/home.css"
         Seu espaço ideal começa
       </h2>
       <div class="sobre-subtitle">com harmonia.</div>
+      <img class="sobre-image only-mobile" src="../img/home/marcia.png" alt="foto da Márcia Mizu">
       <div class="sobre-text">
         <p>Cada ambiente molda como você vive, trabalha e sente.<br/>Organizar é criar fluxo, devolver leveza à rotina e revelar o potencial do espaço  seja ele seu lar, seu escritório ou qualquer lugar onde sua vida acontece.</p>
         <p>A Márcia Mizu oferece soluções personalizadas para pessoas que buscam harmonia, funcionalidade e bem-estar  com sofisticação, atenção aos detalhes e praticidade para a rotina real.</p>
@@ -222,6 +224,14 @@ cssPath: "/css/home.css"
     slidesPerView: 'auto',
     spaceBetween: 20,
     loop: true,
+    breakpoints: {
+      300: {
+        spaceBetween: 16,
+      },
+      1260: {
+        spaceBetween: 20,
+      },
+    }
   });
 
 
@@ -232,5 +242,13 @@ cssPath: "/css/home.css"
       el: '.swiper-pagination',
       clickable: true,
     },
+    breakpoints: {
+      300: {
+        spaceBetween: 16,
+      },
+      1260: {
+        spaceBetween: 20,
+      },
+    }
   });
 </script>
