@@ -27,7 +27,10 @@
     gap: 6rem;
     justify-content: flex-end;
     align-items: center;
-
+    .wrap-links{
+      display: flex;
+      gap: 6rem;
+    }
     li {
       opacity: 1;
       a {
@@ -76,8 +79,12 @@
         display: none;
       }
       .fechar{
-        width: 2r em;
-        height: 1rem;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        letter-spacing: 8%;
+        color: $bege;
+        font-family: $miller;
+        text-transform: uppercase;
         display: initial;
       }
     }
@@ -92,27 +99,37 @@
       opacity: 1;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 5vh;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 1.5rem 2.2rem;
+      gap: 2rem;
       position: absolute;
-      background:url(../img/nav-back.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+      background-color: $marrom;
       top: 0;
-      width: 100vw;
       right: 0;
-      height: 80vh;
+      aspect-ratio: 36/46;
+      width: 100vw;
+      height: auto;
       z-index: 200;
-      .links{
-        font-size: 2.2rem;
-        line-height: 2.2rem;
-        letter-spacing: 5%;
-        color: $azul-500;
-        text-transform: none;
+      .wrap-links{
+        flex-direction: column;
+        gap: 2rem;
       }
-
+      .links{
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        letter-spacing: 5%;
+        text-transform: uppercase;
+        color: $bege;
+        font-weight: 300;
+      }
+      .menu-hand{
+        width: 8rem;
+        height: 5rem;
+        position: absolute;
+        bottom: 2.6rem;
+        right: 2.2rem;
+      }
     }
 
   }

@@ -11,13 +11,30 @@
         font-size: 3rem;
         line-height: 3rem;
         letter-spacing: 10%;
-        font-weight: 400;
         text-transform: uppercase;
     }
     p{
         font-size: 2rem;
         line-height: 2.6rem;
         letter-spacing: 5%;
+        max-width: 72rem;
+    }
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+        gap: 3rem;
+        width: 90%;
+        margin: 4rem auto 3.6rem;
+        h1{
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+            font-weight: 500;
+        }
+        p{
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            letter-spacing: 0%;
+            max-width: 100%;
+        }
     }
 }
 
@@ -48,6 +65,24 @@
             text-transform: uppercase;
         }
     }
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+        gap: 3rem;
+        width: 90%;
+        margin: 0 auto 3rem;
+        .project-main{
+            gap: 1.6rem;
+            img{
+                aspect-ratio: 316/216;
+                width: 100%;
+                height: auto;
+            }
+            h2{
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+            }
+        }
+    }
 }
 
 .other-projects{
@@ -75,6 +110,24 @@
             font-weight: 300;
             text-align: center;
             text-transform: uppercase;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+        gap: 3rem;
+        width: 90%;
+        margin: 0 auto 0rem;
+        .project-other{
+            gap: 1.6rem;
+            img{
+                aspect-ratio: 316/216;
+                width: 100%;
+                height: auto;
+            }
+            h2{
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+            }
         }
     }
 }
