@@ -141,6 +141,28 @@ cssPath: "/css/servicos.css"
 <script>
   let selected = "residencial";
   const section = document.getElementById("info");
+  const urlParams = new URLSearchParams(window.location.search);
+  let type = urlParams.get("type");
+
+   window.onload = () => {
+    if (type) {
+      selected = type;
+      selectById(type);
+      updateSection()
+    } else {
+      selectById(selected);
+    }
+  };
+
+function selectById(id) {
+    resetSelection();
+    type = id;
+    const element = document.getElementById(id);
+    if (element) {
+      element.classList.add("selected");
+      updateSection();
+    }
+}
 
   const residencial = document.getElementById("residencial");
   residencial.addEventListener("click", () => {
