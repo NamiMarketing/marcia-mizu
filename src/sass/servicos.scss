@@ -82,6 +82,7 @@
     img{
         aspect-ratio: 50/40;
         width: 50rem;
+        object-fit: cover;
     }
     .wrap-intro{
         display: flex;
@@ -127,6 +128,7 @@
         img{
             aspect-ratio: 50/40;
             width: 100%;
+            object-fit: cover;
         }
         .wrap-intro{
             height: auto;
